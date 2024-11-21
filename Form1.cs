@@ -30,8 +30,23 @@ namespace ProjetoAtendimento
 
         private void btnChamarSenha_Click(object sender, EventArgs e)
         {
-            guiches.ChamarSenhas(senhas.FilaSenhas);
-            AtualizarListas();
+            if (int.TryParse(txtGuicheId.Text, out int guicheId))
+            {
+                var guiche = guiches.ListaGuiches.Find(g => g.Id == guicheId);
+                if (guiche != null)
+                {
+                    guiche.Chamar(senhas.FilaSenhas);
+                    AtualizarListas();
+                }
+                else
+                {
+                    MessageBox.Show("Guichê não encontrado.", "Erro");
+                }
+            }
+            else
+            {
+                MessageBox.Show("ID do Guichê inválido.", "Erro");
+            }
         }
 
         private void btnListarGuiches_Click(object sender, EventArgs e)

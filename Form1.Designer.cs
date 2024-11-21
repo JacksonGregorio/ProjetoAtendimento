@@ -10,6 +10,8 @@
         private System.Windows.Forms.Button btnListarAtendimentos;
         private System.Windows.Forms.ListBox lstSenhas;
         private System.Windows.Forms.ListBox lstGuiches;
+        private System.Windows.Forms.TextBox txtGuicheId;
+        private System.Windows.Forms.Label lblGuicheId;
 
         protected override void Dispose(bool disposing)
         {
@@ -29,6 +31,8 @@
             this.btnListarAtendimentos = new System.Windows.Forms.Button();
             this.lstSenhas = new System.Windows.Forms.ListBox();
             this.lstGuiches = new System.Windows.Forms.ListBox();
+            this.txtGuicheId = new System.Windows.Forms.TextBox();
+            this.lblGuicheId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnGerarSenha
@@ -75,7 +79,7 @@
             // 
             this.btnListarAtendimentos.Location = new System.Drawing.Point(118, 41);
             this.btnListarAtendimentos.Name = "btnListarAtendimentos";
-            this.btnListarAtendimentos.Size = new System.Drawing.Size(210, 23);
+            this.btnListarAtendimentos.Size = new System.Drawing.Size(100, 23);
             this.btnListarAtendimentos.TabIndex = 4;
             this.btnListarAtendimentos.Text = "Listar Atendimentos";
             this.btnListarAtendimentos.UseVisualStyleBackColor = true;
@@ -97,11 +101,30 @@
             this.lstGuiches.Size = new System.Drawing.Size(312, 95);
             this.lstGuiches.TabIndex = 6;
             // 
+            // txtGuicheId
+            // 
+            // 
+            this.txtGuicheId.Location = new System.Drawing.Point(274, 41);
+            this.txtGuicheId.Name = "txtGuicheId";
+            this.txtGuicheId.Size = new System.Drawing.Size(50, 20);
+            this.txtGuicheId.TabIndex = 7;
+            // 
+            // lblGuicheId
+            // 
+            this.lblGuicheId.AutoSize = true;
+            this.lblGuicheId.Location = new System.Drawing.Point(224, 44);
+            this.lblGuicheId.Name = "lblGuicheId";
+            this.lblGuicheId.Size = new System.Drawing.Size(54, 13);
+            this.lblGuicheId.TabIndex = 8;
+            this.lblGuicheId.Text = "Guichê ID";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 278);
+            this.Controls.Add(this.lblGuicheId);
+            this.Controls.Add(this.txtGuicheId);
             this.Controls.Add(this.lstGuiches);
             this.Controls.Add(this.lstSenhas);
             this.Controls.Add(this.btnListarAtendimentos);
@@ -112,6 +135,7 @@
             this.Name = "Form1";
             this.Text = "Gerenciamento de Senhas";
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
     }
 
